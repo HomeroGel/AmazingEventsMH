@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 25vh;
+}
+
+h1{
+    color: white;
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-header{
+    height: 50%;
+}
+
+
+
+.titulo-card, .fecha{
+    text-align: center;
+}
+
+.contenedor-logo img{
+    width: 10rem;
+}
+
+.navegacion-header{
+    height: 50%;
+}
+
+.navegacion-header a{
+    color: white;
+}
+
+.navegacion-header a:hover{
+    color: aliceblue;
+}
+
+.navegacion-header svg{
+    width: 20px;
+    height: 30px;
+}
+
+header ul li a{
+    background-color: transparent;
+    font-size: large;
+    font-family: 'Prompt', sans-serif;
+}
+
+button, a{
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+
+.flecha{
+    margin-right: 1rem;
+}
+
+
+main{
+    min-height: 65vh;
+    border-top: 2px solid #D90368;
+    border-bottom: 2px solid #D90368;
+}
+
+.cartas{
+    background-color: #d8d2d0 !important;
+    border-radius: 5% !important;
+}
+
+.img{
+    height: 190px;
+}
+
+
+
+footer{
+    height: 10vh;
+}
+
+footer a{
+    background-color: transparent;
+}
+
+footer svg{
+    color: black;
+}
+
+footer p {
+    font-size: .5cm;
+    padding-right: 2rem;
+    margin-bottom: 0;
+}
+
+table{
+    background-color: #FFDAB9 ;
+}
+
+table th{
+    border: none;
+    background-color: #FBC4AB !important;
+}
+
+/* Seccion details */
+
+.contenedor-details{
+    min-height: 30vh;
+    min-width: 10vw;
+}
+
+
+.contenedor-img{
+    background-image: url("./Images/Cine7.jpg");
+    background-size: cover;
+    width: 50%;
+    height: 20vh;
+    border-radius: 1rem;
+}
+
+.titulo-details{
+    text-transform: uppercase;
+    font-family: 'Prompt', sans-serif;
+    letter-spacing: 1rem;
+}
+
+.p-details{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+}
+
+span{
+    font-weight: bold;
+}
+
+/* Seccion contact */
+
+label{
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+
+/* Seccion Stats */
+
+.grupoTablas{
+    width: 5rem;
+}
+
+/* ------------------------------- */
+
+@media (max-width: 992px) {
+    .contenedor-details{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    .contenedor-buscador-cat{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .buscador{
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .contenedor-img{
+        width: 90%;
+    }
+}
+
+
+
+
+/* Animacion */
+
+
+
+/* Animacion header */
+
+.animated-background{
+    background: linear-gradient(
+        to right, #784799,
+        #d35f42, #fcb045);
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+
+/* Animacion botones nav */
+
+.boton{
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: #D90368;
+    border: 2px solid;
+    border-color: #D90368;
+    position: relative;
+}
+
+/* Animacion botones cartas */
+
+
+
+.boton:hover{
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px #D90368;
+    transition: all 0.2s ease;
+}
+
+.boton-cartas{
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 0.3em .8em;
+    background: #0f0d0a;
+    border: 2px solid;
+    border-color: white;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8%;
+}
+
+.boton-cartas:hover{
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 16px black;
+    transition: all 0.2s ease;
+}
+
+
+/* Animacion imagenes */
+.hover-rotate{
+    height: 320px;
+    width: 260px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hover-rotate{
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.hover-rotate:hover{
+    transform: scale(1.1) rotate(0deg);
+}
+
