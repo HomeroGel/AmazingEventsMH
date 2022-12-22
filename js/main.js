@@ -3,7 +3,7 @@ var buscador = ""; //declaro un string vacio donde se van a ir poniendo las cade
 
 
 async function obtenerDatos(){
-    await fetch("https://amazing-events.herokuapp.com/api/events")
+    await fetch("https://mindhub-xj03.onrender.com/api/amazing")
     .then(res => res.json())
     .then(json => eventos = json) //Eventos seria mi data.js
 
@@ -45,6 +45,7 @@ function cargarCategorias() {
 function reconocerBox() {
     //Primero, agarro todos los checkboxes
     let checkboxes = document.querySelectorAll('input[type=checkbox]')
+    console.log(checkboxes)
 
     for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].addEventListener("click", (box) => { //Le agrego un evento al click en la checkbox
@@ -80,6 +81,8 @@ function combinacionInputCheckbox() {
             displayArray.push(...eventos.events.filter(evento => evento.name.toLowerCase().includes(buscador.trim().toLowerCase()) &&
                 evento.category == cat))
         })
+
+        console.log(displayArray)
     } else if (elementCheckeado.length > 0 && buscador === "") {
         elementCheckeado.map(cat => {
             displayArray.push(...eventos.events.filter(evento => evento.category == cat))
